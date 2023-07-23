@@ -75,3 +75,14 @@ h1 {
 .active {
     background-color: var(--color-container);
 }
+
+.ingredient {
+    width: 10rem;
+}
+
+.ingredient-display {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
