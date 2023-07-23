@@ -19,6 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--color-container);
+    height: 100%;
 }
 
 .barContainer {

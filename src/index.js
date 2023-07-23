@@ -22,6 +22,7 @@ const pageTabs = () => {
     if (menuTab()) menuBar.appendChild(menuTab());
 
     // About Tab
+    if (aboutTab()) menuBar.appendChild(aboutTab());
 
     barContainer.appendChild(menuBar);
 
@@ -56,4 +57,4 @@ setup();
 
 // Default page
 loadPage(home());
-document.querySelector('homeButton').classList.add('active');
+document.querySelector('.homeButton').classList.add('active');
