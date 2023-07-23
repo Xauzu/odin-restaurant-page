@@ -1,7 +1,7 @@
 import './style.css'
 import home, { homeTab } from './home'
 import menu, { menuTab } from './menu'
-import about from './about'
+import about, { aboutTab } from './about'
 
 const contentDiv = document.querySelector('#content');
 let container = document.createElement('div');;
@@ -16,15 +16,14 @@ const pageTabs = () => {
     menuBar.classList.add('menuBar');
 
     // Home Tab, Default
-    if (homeTab()) {
-        let newTab = homeTab();
-        newTab.classList.add('active');
-        menuBar.appendChild(newTab);
-    }
-    barContainer.appendChild(menuBar);
+    if (homeTab()) menuBar.appendChild(homeTab());
 
     // Menu Tab
     if (menuTab()) menuBar.appendChild(menuTab());
+
+    // About Tab
+
+    barContainer.appendChild(menuBar);
 
     return barContainer;
 }
@@ -43,6 +42,10 @@ const setup = () => {
 
 export function loadPage(content) {
     clear();
+    const tabs = document.querySelectorAll('.tabButton');
+    tabs.forEach(tab => {
+        if (tab.classList.contains('active')) tab.classList.remove('active');
+    });
     content.classList.add('subcontainer');
     container.append(content);
 };
@@ -53,3 +56,4 @@ setup();
 
 // Default page
 loadPage(home());
+document.querySelector('homeButton').classList.add('active');

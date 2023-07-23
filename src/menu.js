@@ -26,6 +26,7 @@ export function menuTab() {
     tab.classList.add('tabButton', 'menuButton');
     tab.addEventListener('click', () => {
         loadPage(menu());
+        tab.classList.add('active');
     });
     return tab;
 };

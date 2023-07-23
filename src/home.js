@@ -31,6 +31,7 @@ export function homeTab() {
     tab.classList.add('tabButton', 'homeButton');
     tab.addEventListener('click', () => {
         loadPage(home());
+        tab.classList.add('active');
     });
     return tab;
 };
