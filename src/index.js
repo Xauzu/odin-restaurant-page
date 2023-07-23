@@ -39,7 +39,7 @@ const setup = () => {
 
 };
 
-function loadPage(content) {
+export function loadPage(content) {
     clear();
     content.classList.add('subcontainer');
     container.append(content);

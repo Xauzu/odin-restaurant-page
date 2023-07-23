@@ -1,4 +1,5 @@
 import pizza from './pizza.png';
+import { loadPage } from './index';
 
 export default function home() {
     let contentBody = document.createElement('div')
@@ -24,9 +25,12 @@ export default function home() {
     return contentBody;
 };
 
-export function homeTab(cb) {
+export function homeTab() {
     let tab = document.createElement('button');
     tab.textContent = "Home";
     tab.classList.add('tabButton', 'homeButton');
+    tab.addEventListener('click', () => {
+        loadPage(home());
+    });
     return tab;
 };
