@@ -37,7 +37,16 @@ body {
 }
 
 .tabButton:hover {
-    border:
+    background-color: rgb(185, 185, 185);
+}
+
+.tabButton:active {
+    background-color: rgb(207, 207, 207);
+}
+
+.tabButton.active:hover,
+.tabButton.active:active {
+    background-color: var(--color-container);
 }
 
 .menuBar {
