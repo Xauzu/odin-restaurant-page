@@ -1,6 +1,6 @@
 import './style.css'
 import home, { homeTab } from './home'
-import menu from './menu'
+import menu, { menuTab } from './menu'
 import about from './about'
 
 const contentDiv = document.querySelector('#content');
@@ -17,12 +17,14 @@ const pageTabs = () => {
 
     // Home Tab, Default
     if (homeTab()) {
-        let hTab = () => homeTab(loadPage(home()));
-        let newTab = hTab();
+        let newTab = homeTab();
         newTab.classList.add('active');
         menuBar.appendChild(newTab);
     }
     barContainer.appendChild(menuBar);
+
+    // Menu Tab
+    if (menuTab()) menuBar.appendChild(menuTab());
 
     return barContainer;
 }

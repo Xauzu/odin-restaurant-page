@@ -1,4 +1,5 @@
 import pizza from './pizza.png';
+import { loadPage } from './index';
 
 export default function menu() {
     let contentBody = document.createElement('div')
@@ -23,5 +24,8 @@ export function menuTab() {
     let tab = document.createElement('button');
     tab.textContent = "Menu";
     tab.classList.add('tabButton', 'menuButton');
+    tab.addEventListener('click', () => {
+        loadPage(menu());
+    });
     return tab;
 };

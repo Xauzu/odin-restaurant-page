@@ -30,7 +30,7 @@ body {
 
 .tabButton {
     border-radius: 16px 16px 0px 0px;
-    margin-top: 2vw;
+    margin: 2vw 2px 0px 2px;
     padding: 1rem 4rem;
     font-size: large;
 }
