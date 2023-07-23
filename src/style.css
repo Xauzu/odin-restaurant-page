@@ -1,3 +1,8 @@
+:root {
+    --color-container: rgb(233, 233, 233);
+    --color-menu: rgb(211, 211, 211);
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -13,16 +18,29 @@ body {
 .flexCol {
     display: flex;
     flex-direction: column;
-    background-color: rgb(244, 255, 255);
+    background-color: var(--color-container);
 }
 
 .barContainer {
     display: flex;
-    padding: 0px 20vw;
+    flex-direction: column;
+    padding: 0vw 20vw;
+    background-color: var(--color-menu);
+}
+
+.tabButton {
+    border-radius: 16px 16px 0px 0px;
+    margin-top: 2vw;
+    padding: 1rem 4rem;
+    font-size: large;
+}
+
+.tabButton:hover {
+    border:
 }
 
 .menuBar {
-    background-color: rgb(202, 253, 253);
+    padding: 0px 2vw;
 }
 
 .container {
@@ -31,7 +49,7 @@ body {
 }
 
 .subcontainer {
-    background-color: azure;
+    background-color: var(--color-container);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,8 +63,13 @@ img {
 
 h1 {
     font-size: xx-large;
+    padding: 1rem;
 }
 
 .contentText {
     font-size: x-large;
+}
+
+.active {
+    background-color: var(--color-container);
 }

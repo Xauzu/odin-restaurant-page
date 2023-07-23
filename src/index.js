@@ -15,10 +15,12 @@ const pageTabs = () => {
     let menuBar = document.createElement('div');
     menuBar.classList.add('menuBar');
 
+    // Home Tab, Default
     if (homeTab()) {
         let hTab = () => homeTab(loadPage(home()));
-        console.log(hTab);
-        menuBar.appendChild(hTab());
+        let newTab = hTab();
+        newTab.classList.add('active');
+        menuBar.appendChild(newTab);
     }
     barContainer.appendChild(menuBar);
 
